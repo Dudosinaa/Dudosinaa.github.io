@@ -34,7 +34,7 @@ h3 { font-size: 24px; }
 .header-inner { gap: 28px; }
 .brand { gap: 13px; font-family: var(--font-heading); font-size: 26px; font-weight: 850; text-transform: uppercase; letter-spacing: .6px; }
 .brand-symbol { width: 43px; height: 43px; display: block; transform: none; letter-spacing: normal; color: #c27353; }
-.brand-symbol svg { width: 100%; height: 100%; }
+.brand-symbol img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .brand-caption { font-family: var(--font-heading); font-size: 14px; color: var(--text-subtle); letter-spacing: 1.4px; }
 .brand-slash { color: #7b6b57; }
 .main-nav { gap: 28px; }
