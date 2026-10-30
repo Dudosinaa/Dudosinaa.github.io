@@ -1,0 +1,12 @@
+{
+  "name": "ai-personal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Статический персональный сайт об искусственном интеллекте",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" }
+}

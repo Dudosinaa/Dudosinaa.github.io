@@ -1,0 +1,5 @@
+[
+  { "src": "assets/images/photos/landscape.svg", "alt": "Графическая заглушка: горный пейзаж с оранжевым солнцем", "caption": "Ваш взгляд на мир", "isPlaceholder": true },
+  { "src": "assets/images/photos/workspace.svg", "alt": "Графическая заглушка: рабочее пространство с ноутбуком", "caption": "Место, где рождаются идеи", "isPlaceholder": true },
+  { "src": "assets/images/photos/details.svg", "alt": "Графическая заглушка: архитектурные формы в тёплом свете", "caption": "То, что вдохновляет", "isPlaceholder": true }
+]

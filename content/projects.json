@@ -1,0 +1,139 @@
+[
+  {
+    "id": "Голосовой ассистент 'Кирпич'",
+    "title": "Ассистент - наставник",
+    "category": "Языковые модели",
+    "isExample": true,
+    "featured": true,
+    "description": "Пример задачи: консультация по подбору комплектующих для будущего ПК",
+    "contribution": "Здесь опишите свой вклад: подготовку документов, поиск фрагментов и логику ответа.",
+    "technologies": [
+      "Python",
+      "Telebot"
+    ],
+    "result": "Место для подтверждённого результата и ссылки на вашу работу.",
+    "cover": "assets/images/projects/pc-assistant.webp",
+    "coverAlt": "Иллюстрация ИИ-помощника рядом с системным блоком и комплектующими для ПК",
+    "repository": null,
+    "demo": null
+  },
+  {
+    "id": "postcode-space",
+    "title": "PostcodeSpace — оценка заполненности грузового отсека по фотографии",
+    "category": null,
+    "isExample": false,
+    "featured": false,
+    "description": "Командный ML-проект, созданный на хакатоне для задачи Почты России. Сервис анализирует фотографию кузова и оценивает процент его заполнения и свободного места. YOLO выделяет область грузового отсека, а модель Ridge рассчитывает оценку загрузки. Реализованы предобработка изображений, пакетная обработка файлов и ZIP-архивов, консольный интерфейс и XML API. Результаты сохраняются с привязкой к номеру перевозки. Проект помогает автоматизировать визуальную оценку использования грузового пространства.",
+    "contribution": "Я натренировал YOLO-модель определять положение открытого кузова грузовика на фотографии. После определения программа обрезала фото по размерам кузова.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "Ultralytics YOLO",
+      "OpenCV",
+      "NumPy",
+      "SQLAlchemy",
+      "PostgreSQL/SQLite",
+      "Docker Compose"
+    ],
+    "result": null,
+    "cover": "assets/images/projects/postcode-space.webp",
+    "coverAlt": "Иллюстрация открытого грузового отсека с коробками и рамкой компьютерного зрения",
+    "repository": null,
+    "demo": null
+  },
+  {
+    "id": "weather-agent",
+    "title": "Weather Agent — Telegram-бот с ИИ для прогноза погоды",
+    "category": null,
+    "isExample": false,
+    "featured": false,
+    "description": "Погодный помощник на Python с прогнозом на день и неделю, выбором города и ежедневными уведомлениями с учётом часового пояса. Поддерживает краткий и почасовой прогноз, а также ИИ-режим на базе Yandex Cloud для вопросов о погоде на естественном языке. Настройки пользователей сохраняются в SQLite; при недоступности ИИ бот автоматически переключается на Open-Meteo.",
+    "contribution": "Я спроектировал и создал сам.",
+    "technologies": [
+      "Python",
+      "pyTelegramBotAPI",
+      "Open-Meteo API",
+      "Yandex Cloud AI",
+      "SQLite",
+      "APScheduler"
+    ],
+    "result": null,
+    "cover": "assets/images/projects/weather-agent.webp",
+    "coverAlt": "Иллюстрация смартфона с погодными значками, облаком, солнцем и каплями дождя",
+    "repository": null,
+    "demo": null
+  },
+  {
+    "id": "science-research-bot",
+    "title": "Science Research Bot — Telegram-бот для поиска научной литературы",
+    "category": null,
+    "isExample": false,
+    "featured": false,
+    "description": "Бот принимает тему на русском или английском языке, ищет публикации в OpenAlex, Crossref и arXiv и формирует подборку до 10 релевантных работ. Модель Qwen через Yandex AI Studio расширяет поисковые запросы, переводит названия и готовит краткие описания по аннотациям с объяснением связи с темой.\nРеализованы асинхронный поиск, удаление дубликатов, ранжирование и обработка сбоев внешних API. Библиографические данные поступают исключительно из научных источников, а ответы модели проходят строгую валидацию. Проект включает модульную архитектуру и автоматические тесты без обращения к внешним сервисам.",
+    "contribution": "Я спроектировал и создал сам.",
+    "technologies": [
+      "Python 3.12+",
+      "aiogram 3",
+      "asyncio",
+      "httpx",
+      "Pydantic",
+      "Yandex AI Studio",
+      "pytest"
+    ],
+    "result": null,
+    "cover": "assets/images/projects/science-research-bot.webp",
+    "coverAlt": "Иллюстрация поиска научной литературы: лупа, публикации и связи между источниками",
+    "repository": null,
+    "demo": null
+  },
+  {
+    "id": "scientific-assistant",
+    "title": "Научный ассистент — Telegram-бот с интеграцией LLM",
+    "category": null,
+    "isExample": false,
+    "featured": false,
+    "description": "Учебный проект для получения понятных ответов на научные вопросы через Yandex AI Studio. Реализованы асинхронная обработка запросов, управление состояниями диалога, хранение пользовательских настроек в SQLite и форматирование формул для Telegram. Предусмотрены обработка ошибок API, ограничение доступа и защита секретов в логах. Архитектура разделена на независимые модули, основные сценарии покрыты автоматическими тестами. Текущая версия работает без поиска научных публикаций и RAG.",
+    "contribution": "Я спроектировал и создал сам.",
+    "technologies": [
+      "Python 3.12",
+      "aiogram 3",
+      "AsyncOpenAI",
+      "httpx",
+      "SQLite",
+      "aiosqlite",
+      "Pydantic Settings",
+      "pytest",
+      "Ruff"
+    ],
+    "result": null,
+    "cover": "assets/images/projects/scientific-assistant.webp",
+    "coverAlt": "Иллюстрация научного диалога: модель атома, молекула и облако сообщения",
+    "repository": null,
+    "demo": null
+  },
+  {
+    "id": "infrastructure-monitoring",
+    "title": "Система мониторинга инфраструктуры Proxmox и TrueNAS на Python",
+    "category": null,
+    "isExample": false,
+    "featured": false,
+    "description": "Собирает данные через MCP, выявляет перегрузки и сбои, анализирует тренды и рассчитывает объяснимый Health Score. Предоставляет веб-дашборд, email-уведомления и пояснения проблем с помощью Yandex AI.",
+    "contribution": "Спроектировал модульную архитектуру, реализовал сбор и нормализацию данных, хранение истории в SQLite.\nРазработал пороговый и многофакторный анализ, анализ трендов и расчёт Health Score.\nРеализовал жизненный цикл алертов: подтверждение по длительности, эскалацию, восстановление, защиту от дублирования и колебаний около порога.\nСоздал дашборд на Streamlit, добавил SMTP-уведомления и интеграцию Yandex AI с сохранением работы мониторинга при отказе AI.\nПодготовил mock-сценарии, автоматические тесты на pytest и конфигурацию запуска через Docker Compose.",
+    "technologies": [
+      "Python",
+      "SQLite",
+      "Streamlit",
+      "Altair",
+      "MCP",
+      "Yandex AI",
+      "pytest",
+      "Docker Compose",
+      "Linux"
+    ],
+    "result": null,
+    "cover": "assets/images/placeholder.svg",
+    "coverAlt": "Нейтральная заглушка обложки проекта",
+    "repository": null,
+    "demo": null
+  }
+]

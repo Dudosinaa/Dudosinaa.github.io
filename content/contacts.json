@@ -1,0 +1,30 @@
+{
+  "emptyTitle": "Давайте оставаться на связи",
+  "emptyText": "Контакты пока не указаны.",
+  "items": [
+    {
+      "label": "Email",
+      "value": "ivan.eremenko006@gmail.com",
+      "url": "mailto:ivan.eremenko006@gmail.com",
+      "icon": "mail"
+    },
+    {
+      "label": "GitHub",
+      "value": "",
+      "url": "https://github.com/Dudosinaa",
+      "icon": "github"
+    },
+    {
+      "label": "GitFlic",
+      "value": "",
+      "url": "https://gitflic.ru/user/dedauss",
+      "icon": "github"
+    },
+    {
+      "label": "Telegram",
+      "value": "",
+      "url": "",
+      "icon": "message"
+    }
+  ]
+}

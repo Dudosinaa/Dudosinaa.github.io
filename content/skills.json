@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Работа с ИИ",
+    "description": "",
+    "icon": "orbit",
+    "isExample": false,
+    "items": ["Внедрение ИИ в проекты", "Промптинг", "RAG", "Оценка ответов", "Дообучение моделей"]
+  },
+  {
+    "title": "Код и данные",
+    "description": "",
+    "icon": "code",
+    "isExample": false,
+    "items": ["Python", "Pandas", "SQL", "Jupyter Notebook", "Java", "С++", "C#"]
+  },
+  {
+    "title": "От идеи к прототипу",
+    "description": "",
+    "icon": "layers",
+    "isExample": false,
+    "items": ["Git", "API", "Прототипирование", "Документация"]
+  }
+]

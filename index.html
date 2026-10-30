@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#2b2724">
+    <meta name="description" content="Персональное портфолио в области искусственного интеллекта: проекты, навыки, опыт и контакты.">
+    <title>Портфолио — Искусственный интеллект</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="./assets/fonts/RobotoCondensed-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="./styles/main.css?v=tf2-workshop-20261030">
+    <link rel="stylesheet" href="./styles/theme-tf2.css?v=20261030-engineer-waist">
+    <script type="module" src="./scripts/app.js?v=hidden-sections-20261030"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#home" aria-label="На первый экран">
+          <span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="4" stroke-dasharray="28 4"/><path d="m15 33 15-15m-5-7a9 9 0 0 0 12 12l-6-6 2-5 5 5a9 9 0 0 0-13-6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg></span>
+          <span data-bind="brand">имя</span><span class="brand-slash" aria-hidden="true">/</span><span class="brand-caption">портфолио</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Открыть меню" hidden>
+          <span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Основная навигация">
+          <a href="#about" data-bind="sections.about.label">Обо мне</a>
+          <a href="#skills" data-bind="sections.skills.label">Навыки</a>
+          <a href="#projects" data-bind="sections.projects.label">Проекты</a>
+          <a href="#experience" data-bind="sections.experience.label">Опыт</a>
+          <a href="#forums" data-bind="sections.forums.navLabel" aria-label="Участие в форумах">Форумы</a>
+          <!-- TEMP articles:nav — материалов пока нет. Вернуть вместе с articles:section и блоками articles в scripts/app.js.
+          <a href="#articles" data-bind="sections.articles.navLabel" aria-label="Научные статьи">Статьи</a>
+          -->
+          <!-- TEMP photos:nav — материалов пока нет. Вернуть вместе с photos:section, photos:dialog и блоками photos в scripts/app.js.
+          <a href="#photos" data-bind="sections.photos.label">Фото</a>
+          -->
+          <!-- TEMP resume:nav — PDF пока нет. Вернуть вместе с resume:hero, resume:section и блоками resume в scripts/app.js.
+          <a class="nav-resume" href="#resume" data-bind="sections.resume.label">Резюме</a>
+          -->
+          <a class="nav-contact" href="#contacts"><span data-bind="sections.contacts.label">Контакты</span><span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img class="hero-backdrop" src="./assets/images/tf2/industrial-yard.webp" width="1600" height="900" alt="" aria-hidden="true" fetchpriority="high">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-bind="area">Искусственный интеллект</span></div>
+          <p class="hero-name"><span data-bind="name">Ваше имя</span><span class="small-divider" aria-hidden="true"></span><span data-bind="hero.eyebrow">Персональное портфолио</span></p>
+          <h1 id="hero-title"><span data-bind="hero.title">Идеи, код</span><br><em data-bind="hero.titleAccent">и интеллект.</em></h1>
+          <p class="hero-intro" data-bind="hero.intro">Здесь будет ваше короткое представление: чем вы занимаетесь в области ИИ и какие задачи вам интересны.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects"><span data-bind="hero.primaryAction">Смотреть проекты</span><span aria-hidden="true">↗</span></a>
+            <!-- TEMP resume:hero — PDF пока нет. Вернуть вместе с resume:section и блоками resume в scripts/app.js.
+            <a class="button button-secondary" href="#resume"><span class="icon-slot" data-icon="file" aria-hidden="true"></span><span data-bind="hero.secondaryAction">Резюме</span></a>
+            -->
+          </div>
+          <p class="demo-notice" id="demo-notice"><span aria-hidden="true">◌</span>Пример наполнения — замените своими данными</p>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img class="hero-engineer" src="./assets/images/tf2/engineer-cutout.webp?v=20261030-repaired" width="1072" height="1552" alt="" fetchpriority="high">
+          <div class="art-caption"><span class="caption-line"></span><div><span data-bind="hero.artLabel">Идея обретает форму</span><small data-bind="hero.artCaption">Человек × технологии</small></div><span class="art-plus">+</span></div>
+        </div>
+      </section>
+
+      <div class="container overview" id="overview" aria-label="Коротко о портфолио"></div>
+      <div class="container load-error" id="profile-error" role="status" hidden></div>
+
+      <section class="section container" id="about" aria-labelledby="about-title">
+        <div class="section-kicker"><span data-bind="sections.about.number">01</span><span data-bind="sections.about.label">Обо мне</span><span class="kicker-line"></span></div>
+        <h2 id="about-title" data-bind="about.title">За технологиями — человек.</h2>
+        <div class="about-grid">
+          <article class="panel about-story" id="about-story"></article>
+          <figure class="panel portrait-panel" id="portrait-panel"></figure>
+          <article class="panel principle-panel">
+            <span class="icon-slot principle-icon" data-icon="orbit" aria-hidden="true"></span>
+            <div><span class="example-badge profile-example">Пример формулировки</span><h3 data-bind="about.principleTitle">Любопытство как точка отсчёта.</h3><p data-bind="about.principleText">Здесь можно сформулировать принцип, который отражает ваш подход к работе.</p></div>
+            <span class="principle-decoration" aria-hidden="true">↗</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container" id="skills" aria-labelledby="skills-title">
+        <div class="section-kicker"><span data-bind="sections.skills.number">02</span><span data-bind="sections.skills.label">Навыки</span><span class="kicker-line"></span></div>
+        <div class="section-heading"><h2 id="skills-title" data-bind="sections.skills.title">Инструменты для идей.</h2><p data-bind="sections.skills.intro"></p></div>
+        <div class="skills-grid" id="skills-list" aria-live="polite"></div>
+      </section>
+
+      <section class="section container" id="projects" aria-labelledby="projects-title">
+        <div class="section-kicker"><span data-bind="sections.projects.number">03</span><span data-bind="sections.projects.label">Проекты</span><span class="kicker-line"></span></div>
+        <div class="section-heading"><h2 id="projects-title" data-bind="sections.projects.title">От задачи — к решению.</h2><p data-bind="sections.projects.intro"></p></div>
+        <div class="project-filters" id="project-filters" role="group" aria-label="Фильтр проектов" hidden></div>
+        <p class="sr-only" id="project-count" role="status"></p>
+        <div class="projects-grid" id="projects-list" aria-live="polite"></div>
+      </section>
+
+      <section class="section container" id="experience" aria-labelledby="experience-title">
+        <div class="section-kicker"><span data-bind="sections.experience.number">04</span><span data-bind="sections.experience.label">Опыт</span><span class="kicker-line"></span></div>
+        <div class="experience-layout"><div class="experience-heading"><h2 id="experience-title" data-bind="sections.experience.title">Путь, который складывается.</h2><p class="section-intro" data-bind="sections.experience.intro"></p><span class="experience-arrow" aria-hidden="true">↘</span></div><div class="timeline" id="experience-list"></div></div>
+      </section>
+
+      <section class="section container" id="forums" aria-labelledby="forums-title">
+        <div class="section-kicker"><span data-bind="sections.forums.number">05</span><span data-bind="sections.forums.label">Участие в форумах</span><span class="kicker-line"></span></div>
+        <div class="section-heading"><h2 id="forums-title" data-bind="sections.forums.title">В пространстве идей.</h2><p data-bind="sections.forums.intro"></p></div>
+        <div class="forums-grid" id="forums-list" aria-live="polite"></div>
+      </section>
+
+      <!-- TEMP articles:section — материалов пока нет. Вернуть вместе с articles:nav и блоками articles в scripts/app.js.
+      <section class="section container" id="articles" aria-labelledby="articles-title">
+        <div class="section-kicker"><span data-bind="sections.articles.number">06</span><span data-bind="sections.articles.label">Научные статьи</span><span class="kicker-line"></span></div>
+        <div class="section-heading"><h2 id="articles-title" data-bind="sections.articles.title">Мысли, обретшие форму.</h2><p data-bind="sections.articles.intro"></p></div>
+        <div class="articles-list" id="articles-list" aria-live="polite"></div>
+      </section>
+      -->
+
+      <!-- TEMP photos:section — материалов пока нет. Вернуть вместе с photos:nav, photos:dialog и блоками photos в scripts/app.js.
+      <section class="section container" id="photos" aria-labelledby="photos-title">
+        <div class="section-kicker"><span data-bind="sections.photos.number">07</span><span data-bind="sections.photos.label">Фотографии</span><span class="kicker-line"></span></div>
+        <div class="section-heading"><h2 id="photos-title" data-bind="sections.photos.title">За пределами экрана.</h2><p data-bind="sections.photos.intro"></p></div>
+        <div class="photos-grid" id="photos-list"></div>
+      </section>
+      -->
+
+      <!-- TEMP resume:section — PDF пока нет. Отключены также подписи и заглушки; вернуть вместе с resume:nav, resume:hero и блоками resume в scripts/app.js.
+      <section class="section container" id="resume" aria-labelledby="resume-title">
+        <div class="section-kicker"><span data-bind="sections.resume.number">08</span><span data-bind="sections.resume.label">Резюме</span><span class="kicker-line"></span></div>
+        <div class="panel resume-panel"><div class="resume-copy"><span class="eyebrow" data-bind="resume.label">Персональное резюме</span><h2 id="resume-title" data-bind="sections.resume.title">Всё важное — в одном файле.</h2><p data-bind="sections.resume.intro"></p></div><div class="resume-file" id="resume-file" aria-live="polite"></div></div>
+      </section>
+      -->
+
+      <section class="section contacts-section" id="contacts" aria-labelledby="contacts-title">
+        <div class="container">
+          <div class="section-kicker">
+            <!-- TEMP sections:number — скрытые разделы не занимают номера. При восстановлении пересчитать номера в content/profile.json и вернуть привязку вместо следующего span.
+            <span data-bind="sections.contacts.number">09</span>
+            -->
+            <span>06</span><span data-bind="sections.contacts.label">Контакты</span><span class="kicker-line"></span>
+          </div>
+          <div class="contact-heading"><h2 id="contacts-title"><span data-bind="sections.contacts.title">Хорошие идеи начинаются</span><br><em data-bind="sections.contacts.titleAccent">с разговора.</em></h2><span class="contact-arrow" aria-hidden="true">↗</span></div>
+          <p class="section-intro" data-bind="sections.contacts.intro"></p>
+          <div class="contacts-grid" id="contacts-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container"><a class="footer-name" href="#home" data-bind="name">Ваше имя</a><p>© <span id="current-year"></span> <span data-bind="footer">Персональное портфолио · Искусственный интеллект</span></p><a class="back-top" href="#home">Наверх <span aria-hidden="true">↑</span></a></footer>
+
+    <!-- TEMP photos:dialog — галерея отключена до появления материалов. Вернуть вместе с photos:section и photos:viewer в scripts/app.js (DOM, состояние и обработчики).
+    <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="dialog-caption">
+      <div class="dialog-toolbar"><span id="dialog-counter"></span><button class="icon-button" id="close-photo" type="button" aria-label="Закрыть фотографию">✕</button></div>
+      <img id="dialog-image" alt="" width="1200" height="900">
+      <div class="dialog-footer"><button class="icon-button" id="previous-photo" type="button" aria-label="Предыдущая фотография">←</button><p id="dialog-caption"></p><button class="icon-button" id="next-photo" type="button" aria-label="Следующая фотография">→</button></div>
+    </dialog>
+    -->
+
+    <noscript><div class="noscript-message">Для загрузки содержимого из JSON нужен JavaScript. Включите его и обновите страницу.</div></noscript>
+  </body>
+</html>
