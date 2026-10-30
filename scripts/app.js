@@ -80,12 +80,13 @@ function contentError(target, filename, retry) {
 function bindProfile(profile) {
   for (const node of document.querySelectorAll("[data-bind]")) {
     const value = node.dataset.bind.split(".").reduce((parent, key) => parent?.[key], profile);
-    if (typeof value === "string") node.textContent = value;
+    if (typeof value === "string") {
+      node.textContent = value;
+      if (node.tagName === "P") node.hidden = !textValue(value);
+    }
   }
   document.title = textValue(profile.pageTitle, `${textValue(profile.name, "Портфолио")} — Искусственный интеллект`);
   if (profile.description) $('meta[name="description"]').content = profile.description;
-  $("#demo-notice").hidden = profile.isExample !== true;
-  document.querySelectorAll(".profile-example").forEach(node => { node.hidden = profile.isExample !== true; });
   const overview = $("#overview");
   overview.replaceChildren();
   for (const item of listValue(profile.overview)) {
@@ -99,7 +100,6 @@ function bindProfile(profile) {
   const about = profile.about || {};
   const story = $("#about-story");
   story.replaceChildren();
-  if (profile.isExample) story.append(badge("Пример текста · о себе"));
   if (about.lead) story.append(element("h3", "", about.lead));
   for (const paragraph of listValue(about.paragraphs)) story.append(element("p", "", textValue(paragraph)));
   if (about.note) story.append(element("p", "story-note", about.note));
@@ -110,7 +110,7 @@ function bindProfile(profile) {
   } else {
     const placeholder = element("div", "portrait-placeholder");
     placeholder.setAttribute("aria-hidden", "true");
-    placeholder.append(icon("person", "portrait-outline"), element("span", "", "Ваш портрет"));
+    placeholder.append(icon("person", "portrait-outline"));
     portrait.append(placeholder);
   }
   if (about.portraitCaption) portrait.append(element("figcaption", "", about.portraitCaption));
@@ -125,7 +125,6 @@ function renderSkills(data) {
     const card = element("article", "panel skill-card");
     const top = element("div", "skill-top");
     top.append(icon(skill.icon, "skill-icon"));
-    if (skill.isExample) top.append(badge("Пример навыков"));
     card.append(top, element("h3", "", textValue(skill.title, "Группа навыков")));
     if (skill.description) card.append(element("p", "", skill.description));
     if (listValue(skill.items).length) card.append(tags(skill.items));
@@ -141,7 +140,6 @@ function projectCard(project, index) {
   const body = element("div", "project-body");
   const meta = element("div", "project-meta");
   if (project.category) meta.append(element("span", "project-category", project.category));
-  if (project.isExample) meta.append(badge());
   if (meta.children.length) body.append(meta);
   body.append(element("h3", "", textValue(project.title, "Проект")));
   if (project.description) body.append(element("p", "project-description", project.description));
@@ -204,8 +202,7 @@ function renderExperience(data) {
     const article = element("article", "timeline-item");
     const meta = element("div", "timeline-meta");
     if (entry.period) meta.append(element("span", "", entry.period));
-    if (entry.isExample) meta.append(badge(textValue(entry.type, "Пример записи")));
-    else if (entry.type) meta.append(element("span", "project-category", entry.type));
+    if (!entry.isExample && entry.type) meta.append(element("span", "project-category", entry.type));
     if (meta.children.length) article.append(meta);
     article.append(element("h3", "", textValue(entry.title, "Этап опыта")));
     if (entry.organization) article.append(element("p", "timeline-organization", entry.organization));
@@ -223,7 +220,6 @@ function renderExperience(data) {
 function recordTop(iconName, exampleLabel, isExample) {
   const top = element("div", "record-top");
   top.append(icon(iconName, "record-icon"));
-  if (isExample) top.append(badge(exampleLabel));
   return top;
 }
 

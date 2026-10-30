@@ -5,13 +5,13 @@
     "category": "Языковые модели",
     "isExample": true,
     "featured": true,
-    "description": "Пример задачи: консультация по подбору комплектующих для будущего ПК",
-    "contribution": "Здесь опишите свой вклад: подготовку документов, поиск фрагментов и логику ответа.",
+    "description": "Консультация по подбору комплектующих для будущего ПК",
+    "contribution": "",
     "technologies": [
       "Python",
       "Telebot"
     ],
-    "result": "Место для подтверждённого результата и ссылки на вашу работу.",
+    "result": "",
     "cover": "assets/images/projects/pc-assistant.webp",
     "coverAlt": "Иллюстрация ИИ-помощника рядом с системным блоком и комплектующими для ПК",
     "repository": null,

@@ -41,7 +41,8 @@ test("Демонстрационные записи помечены; реаль
 
 test("Все обложки и фотографии существуют и имеют alt", async () => {
   for (const project of await json("projects")) {
-    assert.ok(project.title && project.description && project.contribution);
+    assert.ok(project.title && project.description);
+    assert.equal(typeof project.contribution, "string");
     assert.ok(project.coverAlt);
     assert.ok(project.technologies.length);
     await access(new URL(project.cover, root));
