@@ -4,6 +4,9 @@ import { textValue, listValue, localAsset, safeLink, projectCategories, filterPr
 // TEMP pdf:import — статьи и резюме отключены до появления материалов. Вернуть при восстановлении любого из них.
 // import { availablePDF } from "./content.js";
 import { setupReveals } from "./motion.js";
+import { setupPageScroll } from "./page-scroll.js";
+
+const restorePageScroll = setupPageScroll();
 
 const siteRoot = new URL("../", import.meta.url);
 const $ = selector => document.querySelector(selector);
@@ -478,8 +481,5 @@ await Promise.allSettled([
   // loadContent("photos.json", $("#photos-list"), renderPhotos),
   loadContent("contacts.json", $("#contacts-list"), renderContacts)
 ]);
-// Re-align direct section links once JSON has established the page layout.
-if (location.hash) {
-  const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-  target?.scrollIntoView({ behavior: "instant", block: "start" });
-}
+// Apply the URL's starting position once JSON and fonts establish the layout.
+await restorePageScroll();
