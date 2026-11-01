@@ -34,13 +34,13 @@
   ],
   "about": {
     "title": "За технологиями — человек.",
-    "lead": "Здесь начинается ваша история.",
+    "lead": "Увлекаюсь программированием с 12 лет. Люблю копаться в коде и обучать модели.",
     "paragraphs": [],
     "note": "",
     "portrait": null,
     "portraitAlt": "",
     "portraitCaption": "",
-    "principleTitle": "Любопытство как точка отсчёта.",
+    "principleTitle": "Главное не забыть сюда что нибудь написать :)",
     "principleText": ""
   },
   "sections": {
@@ -63,7 +63,7 @@
     "experience": {
       "label": "Опыт",
       "number": "04",
-      "title": "Путь, который складывается.",
+      "title": "Мой путь",
       "intro": ""
     },
     "photos": {
